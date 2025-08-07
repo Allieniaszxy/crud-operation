@@ -76,7 +76,7 @@ const deleteStudent = async (req, res) => {
   try {
     const remove = await studentModel.findByIdAndDelete(req.params.id);
     if (!remove) {
-      res.status(201).json({
+      return res.status(404).json({
         message: "user not found",
       });
     }

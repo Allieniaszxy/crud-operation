@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const mongo = "mongodb://localhost:27017/school";
+const URI = "mongodb://localhost:27017/school";
 mongoose
-  .connect(mongo)
+  .connect(URI)
   .then(() => {
     console.log("connect to db successfully");
   })
